@@ -36,7 +36,7 @@ public class PiDigitThread extends Thread {
      */
     @Override
     public void run() {
-        
+
         System.out.println("Thread " + this.getId() + " started. Calculating from " + start + " to " + (start + count));
         byte[] partialResult = calculateDigits(start, count);
         System.arraycopy(partialResult, 0, result, offset, partialResult.length);
@@ -57,3 +57,7 @@ public class PiDigitThread extends Thread {
         return digits;
     }
 }
+
+
+
+

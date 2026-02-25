@@ -17,7 +17,7 @@ public class PiDigits {
      */
     public static byte[] getDigits(int start, int count, int N) {
         if (start < 0 || count < 0 || N <= 0) {
-            throw new RuntimeException("Invalid parameters");
+            throw new RuntimeException("Parametros invalidos");
         }
 
         byte[] digits = new byte[count];
@@ -26,11 +26,11 @@ public class PiDigits {
         List<PiDigitThread> threads = new ArrayList<>();
 
         for (int i = 0; i < N; i++) {
-            int chunkStart = start + i * chunkSize;
-            int chunkEnd = Math.min(chunkStart + chunkSize, start + count);
-            if (chunkStart >= chunkEnd) break;
+            int StartThread = start + i * chunkSize;
+            int EndThread = Math.min(StartThread + chunkSize, start + count);
+            if (StartThread >= EndThread) break;
 
-            PiDigitThread thread = new PiDigitThread(chunkStart, chunkEnd - chunkStart, digits, chunkStart - start);
+            PiDigitThread thread = new PiDigitThread(StartThread, EndThread - StartThread, digits, StartThread - start);
             threads.add(thread);
             thread.start();
         }
