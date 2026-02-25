@@ -9,14 +9,12 @@ import java.util.Arrays;
 
 /**
  *
- * @author hcadavid
+ * @author Juanes
  */
 public class Main {
 
     public static void main(String a[]) {
-        System.out.println(bytesToHex(PiDigits.getDigits(0, 10)));
-        System.out.println(bytesToHex(PiDigits.getDigits(1, 100)));
-        System.out.println(bytesToHex(PiDigits.getDigits(1, 1000000)));
+        System.out.println(bytesToHex(PiDigits.getDigits(0, 10,15)));
     }
 
     private final static char[] hexArray = "0123456789ABCDEF".toCharArray();
