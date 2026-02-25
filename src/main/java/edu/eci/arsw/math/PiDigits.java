@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PiDigits {
+
     private static int DigitsPerSum = 8;
     private static double Epsilon = 1e-17;
 
